@@ -1,0 +1,118 @@
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem; /* Adjusted for smaller screens */
+  flex-direction: column; /* Stack elements on smaller screens */
+}
+
+.image-container {
+  height: 40vw; /* Responsive height based on viewport width */
+  max-height: 700px; /* Max height to maintain layout */
+  width: 100%; /* Full width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.image {
+  height: 100%;
+  width: 100%; /* Ensure the image covers the container */
+  object-fit: cover; /* Cover for full container */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  padding: 1.5rem;
+}
+
+.heading {
+  font-size: 0.75rem; /* Reduced for better readability on smaller screens */
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Reduced margin */
+}
+
+.paragraph {
+  font-size: 0.5rem; /* Reduced size for mobile */
+  margin-bottom: 0.4rem; /* Reduced margin */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row; /* Stack buttons on smaller screens */
+  gap: 0.5rem; /* Reduced gap between buttons */
+}
+
+.button {
+  padding: 0.2rem 0.6rem; /* Reduced padding */
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.5rem; /* Reduced size for mobile */
+
+}
+
+.button.bg-blue {
+  background-color: #2563eb;
+}
+
+.button.bg-gray {
+  background-color: #d1d5db;
+  color: black;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 640px) {
+  .container {
+    flex-direction: row; /* Row layout for larger screens */
+  }
+
+  .button-container {
+    flex-direction: row; /* Row layout for buttons on larger screens */
+  }
+
+  .button {
+    font-size: 1.05rem;
+    padding: 0.4rem 8rem;
+  }
+
+  .heading {
+    font-size: 2rem; /* Adjust font size for medium screens */
+  }
+
+  .paragraph {
+    font-size: 1rem; /* Adjust font size for medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 3rem; /* Further increase font size for larger screens */
+  }
+
+  .paragraph {
+    font-size: 1.5rem; /* Further increase font size for larger screens */
+  }
+
+  .image-container {
+    height: 50vw; /* Adjust height for larger screens */
+  }
+  .button {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+  }
+}
